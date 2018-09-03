@@ -22,11 +22,13 @@
     "eject": "react-scripts eject",
     "babel": "babel src -d lib",
     "precommit": "lint-staged",
-    "relay":
-      "relay-compiler --src ./src --schema ./schema.faker.graphql --extensions js jsx"
+    "relay": "relay-compiler --src ./src --schema ./schema.faker.graphql --extensions js jsx"
   },
   "lint-staged": {
-    "*.js": ["eslint --fix", "git add"]
+    "*.js": [
+      "eslint --fix",
+      "git add"
+    ]
   },
   "husky": {
     "hooks": {
@@ -36,12 +38,14 @@
     }
   },
   "devDependencies": {
+    "@babel/cli": "^7.0.0",
     "@babel/core": "^7.0.0",
     "@babel/plugin-transform-runtime": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
     "@babel/preset-flow": "^7.0.0",
     "@babel/preset-react": "^7.0.0",
     "babel-eslint": "^9.0.0",
+    "babel-plugin-relay": "^1.6.2",
     "eslint": "^5.5.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-plugin-import": "^2.14.0",
