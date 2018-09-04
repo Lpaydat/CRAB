@@ -1,4 +1,5 @@
 **/build/**
 **/lib/**
 **/docs/**
-	 !.eslintrc.json
+**/src/App.js
+!.eslintrc.json
