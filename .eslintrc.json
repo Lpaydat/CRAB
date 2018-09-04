@@ -1,4 +1,13 @@
 {
   "parser": "babel-eslint",
-  "extends": "airbnb"
+  "plugins": ["flowtype", "graphql"],
+  "extends": "airbnb",
+  "rules": {
+    "graphql/template-strings": [
+      "error",
+      {
+        "env": "relay"
+      }
+    ]
+  }
 }
