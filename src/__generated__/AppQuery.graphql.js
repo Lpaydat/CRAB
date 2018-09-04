@@ -1,6 +1,6 @@
 /**
  * @flow
- * @relayHash 88d58a1f132cc691c8f2af9ef9b2003e
+ * @relayHash b4718c2813dad79f953da37b05a26862
  */
 
 /* eslint-disable */
@@ -9,11 +9,11 @@
 
 /*::
 import type { ConcreteRequest } from 'relay-runtime';
-type Message_msg$ref = any;
+type Tester_msg$ref = any;
 export type AppQueryVariables = {||};
 export type AppQueryResponse = {|
   +message: ?{|
-    +$fragmentRefs: Message_msg$ref
+    +$fragmentRefs: Tester_msg$ref
   |}
 |};
 export type AppQuery = {|
@@ -26,12 +26,12 @@ export type AppQuery = {|
 /*
 query AppQuery {
   message {
-    ...Message_msg
+    ...Tester_msg
     id
   }
 }
 
-fragment Message_msg on Message {
+fragment Tester_msg on Message {
   id
   text
 }
@@ -42,7 +42,7 @@ const node/*: ConcreteRequest*/ = {
   "operationKind": "query",
   "name": "AppQuery",
   "id": null,
-  "text": "query AppQuery {\n  message {\n    ...Message_msg\n    id\n  }\n}\n\nfragment Message_msg on Message {\n  id\n  text\n}\n",
+  "text": "query AppQuery {\n  message {\n    ...Tester_msg\n    id\n  }\n}\n\nfragment Tester_msg on Message {\n  id\n  text\n}\n",
   "metadata": {},
   "fragment": {
     "kind": "Fragment",
@@ -62,7 +62,7 @@ const node/*: ConcreteRequest*/ = {
         "selections": [
           {
             "kind": "FragmentSpread",
-            "name": "Message_msg",
+            "name": "Tester_msg",
             "args": null
           }
         ]
@@ -103,5 +103,5 @@ const node/*: ConcreteRequest*/ = {
   }
 };
 // prettier-ignore
-(node/*: any*/).hash = '2c6dbcf82697e46d91aea8a07bfc67d7';
+(node/*: any*/).hash = 'fde76665dbd055d16e52358bde74f508';
 module.exports = node;

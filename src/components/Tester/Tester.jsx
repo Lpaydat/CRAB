@@ -2,14 +2,14 @@
 import React from "react";
 import { createFragmentContainer, graphql } from "react-relay";
 
-const Message = ({ msg }: { msg: { id: string, text: string } }) => (
+const Tester = ({ msg }: { msg: { id: string, text: string } }) => (
   <div>{`${msg.id}: ${msg.text}`}</div>
 );
 
 export default createFragmentContainer(
-  Message,
+  Tester,
   graphql`
-    fragment Message_msg on Message {
+    fragment Tester_msg on Message {
       id
       text
     }

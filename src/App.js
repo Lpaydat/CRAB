@@ -2,7 +2,7 @@
 import React from "react";
 import { QueryRenderer, graphql } from "react-relay";
 import environment from "./data/environment";
-import Message from "./Message";
+import Tester from "./components/Tester";
 import logo from "./logo.svg";
 import "./App.css";
 
@@ -20,7 +20,7 @@ const App = () => (
       query={graphql`
         query AppQuery {
           message {
-            ...Message_msg
+            ...Tester_msg
           }
         }
       `}
@@ -30,7 +30,7 @@ const App = () => (
           return <div>{error.message}</div>;
         }
         if (props) {
-          return <Message msg={props.message} />;
+          return <Tester msg={props.message} />;
         }
         return <div>Loading...</div>;
       }}
