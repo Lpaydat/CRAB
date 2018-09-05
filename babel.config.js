@@ -1,11 +1,18 @@
 module.exports = {
   plugins: [
     'relay',
-    '@babel/plugin-transform-runtime',
-    '@babel/plugin-transform-react-constant-elements',
-    '@babel/plugin-transform-react-inline-elements',
-    '@babel/plugin-transform-react-jsx',
+    '@babel/transform-runtime',
+    '@babel/transform-react-constant-elements',
+    '@babel/transform-react-inline-elements',
+    '@babel/transform-react-jsx',
+    '@babel/external-helpers',
+    'module:fast-async',
     'inline-react-svg',
+    'lodash',
+    'ramda',
+    'hash-resolve',
+    'module:faster.js',
+    'transform-react-remove-prop-types',
     [
       'transform-imports',
       {
@@ -20,7 +27,7 @@ module.exports = {
       },
     ],
     [
-      'babel-plugin-root-import',
+      'root-import',
       {
         paths: [
           {
@@ -47,5 +54,5 @@ module.exports = {
       },
     ],
   ],
-  presets: ['@babel/preset-env', '@babel/preset-react', '@babel/preset-flow'],
+  presets: [['@babel/env', { targets: { node: 6 } }], '@babel/react', '@babel/flow'],
 };
