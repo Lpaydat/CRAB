@@ -28,6 +28,7 @@
     "eject": "react-scripts eject",
     "babel": "babel src -d lib",
     "precommit": "lint-staged",
+    "faker": "graphql-faker --open",
     "relay":
       "relay-compiler --src ./src --schema ./schema.faker.graphql --extensions js jsx"
   },
