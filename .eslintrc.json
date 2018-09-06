@@ -6,8 +6,7 @@
     "graphql/template-strings": [
       "error",
       {
-        "env": "relay",
-        "schemaPath": "schema.faker.graphql"
+        "env": "relay"
       }
     ]
   }
